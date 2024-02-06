@@ -2,6 +2,7 @@
 
 class Product {
 
+    
     private $id;
     private $title;
     private $image;
@@ -36,7 +37,8 @@ class Product {
         return $this -> title;
     }
     public function setTitle($title) {
-
+        if(!is_string($title) || strlen($title) < 3)
+            throw new Exception("$title is not a valid Title");
         $this -> title = $title;
     }
 
@@ -54,7 +56,8 @@ class Product {
         return $this -> price;
     }
     public function setPrice($price) {
-
+        if(!is_numeric($price))
+            throw new Exception("$price must be a number");
         $this -> price = $price;
     }
 

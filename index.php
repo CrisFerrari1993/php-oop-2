@@ -31,7 +31,6 @@
             <ul>
                 <?php
         
-        
                     foreach ($prods as $prod) {
                         
                         ?>
