@@ -38,7 +38,7 @@ class Product {
     }
     public function setTitle($title) {
         if(!is_string($title) || strlen($title) < 3)
-            throw new Exception("$title is not a valid Title");
+            throw new Exception("$title must be most longher than 3 Character");
         $this -> title = $title;
     }
 
@@ -47,7 +47,7 @@ class Product {
         return $this -> image;
     }
     public function setImage($image) {
-
+        
         $this -> image = $image;
     }
 
